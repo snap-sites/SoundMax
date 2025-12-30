@@ -16,44 +16,230 @@ class AutoEQManager: ObservableObject {
 
     // Popular headphones index (curated list for quick access)
     static let popularHeadphones: [AutoEQHeadphone] = [
-        // Over-ear
+        // === OVER-EAR === //
+
+        // Sennheiser
+        AutoEQHeadphone(name: "Sennheiser HD 560S", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Sennheiser HD 600", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Sennheiser HD 650", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser HD 660S", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Sennheiser HD 800", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Sennheiser HD 800 S", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser HD 820", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser HD 599", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser HD 569", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser HD 450BT", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser Momentum 3 Wireless", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser Momentum 4 Wireless", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sennheiser PXC 550-II", source: "oratory1990", type: "over-ear"),
+
+        // Beyerdynamic
         AutoEQHeadphone(name: "Beyerdynamic DT 770 Pro", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Beyerdynamic DT 880", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Beyerdynamic DT 990 Pro", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Beyerdynamic DT 1770 Pro", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Beyerdynamic DT 1990 Pro", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Beyerdynamic Amiron Home", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Beyerdynamic T1 2nd Generation", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Beyerdynamic T5p 2nd Generation", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Beyerdynamic Lagoon ANC", source: "oratory1990", type: "over-ear"),
+
+        // Audio-Technica
         AutoEQHeadphone(name: "Audio-Technica ATH-M50x", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audio-Technica ATH-M40x", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audio-Technica ATH-M70x", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audio-Technica ATH-R70x", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audio-Technica ATH-AD700X", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audio-Technica ATH-AD900X", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audio-Technica ATH-A990Z", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audio-Technica ATH-MSR7b", source: "oratory1990", type: "over-ear"),
+
+        // Sony
+        AutoEQHeadphone(name: "Sony WH-1000XM3", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Sony WH-1000XM4", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Sony WH-1000XM5", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sony MDR-Z7M2", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sony MDR-1AM2", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sony MDR-7506", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Sony MDR-V6", source: "oratory1990", type: "over-ear"),
+
+        // Bose
+        AutoEQHeadphone(name: "Bose QuietComfort 35 II", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "Bose QuietComfort 45", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Bose 700", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Bose QuietComfort Ultra", source: "oratory1990", type: "over-ear"),
+
+        // AKG
+        AutoEQHeadphone(name: "AKG K240 Studio", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "AKG K371", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "AKG K553 MKII", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "AKG K612 Pro", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "AKG K701", source: "oratory1990", type: "over-ear"),
         AutoEQHeadphone(name: "AKG K702", source: "oratory1990", type: "over-ear"),
-        AutoEQHeadphone(name: "HiFiMAN Sundara", source: "oratory1990", type: "over-ear"),
-        AutoEQHeadphone(name: "HiFiMAN HE400i 2020", source: "oratory1990", type: "over-ear"),
-        AutoEQHeadphone(name: "Focal Clear", source: "oratory1990", type: "over-ear"),
-        AutoEQHeadphone(name: "Meze 99 Classics", source: "oratory1990", type: "over-ear"),
-        AutoEQHeadphone(name: "Philips SHP9500", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "AKG K712 Pro", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "AKG K812", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "AKG N700NC M2", source: "oratory1990", type: "over-ear"),
 
-        // In-ear / IEMs
+        // HiFiMAN
+        AutoEQHeadphone(name: "HiFiMAN Sundara", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN Ananda", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN Arya", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN Edition XS", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN HE400i 2020", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN HE400se", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN HE5XX", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN HE6se", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HiFiMAN Deva", source: "oratory1990", type: "over-ear"),
+
+        // Focal
+        AutoEQHeadphone(name: "Focal Clear", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Focal Elex", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Focal Elegia", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Focal Utopia", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Focal Stellia", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Focal Celestee", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Focal Bathys", source: "oratory1990", type: "over-ear"),
+
+        // Other Over-ear
+        AutoEQHeadphone(name: "Meze 99 Classics", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Meze 99 Neo", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Meze Empyrean", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Meze Liric", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Philips SHP9500", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Philips Fidelio X2HR", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Philips Fidelio X3", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Dan Clark Audio Aeon 2", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audeze LCD-2 Classic", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audeze LCD-X", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audeze Mobius", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Audeze Penrose", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "SIVGA SV021", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Shure SRH840", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Shure SRH1540", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Shure SRH1840", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "V-Moda Crossfade M-100", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Monoprice M1060", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Monoprice M570", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Status Audio CB-1", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "RODE NTH-100", source: "oratory1990", type: "over-ear"),
+
+        // Gaming Headsets
+        AutoEQHeadphone(name: "SteelSeries Arctis Nova Pro", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "SteelSeries Arctis 7", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HyperX Cloud II", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "HyperX Cloud Alpha", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Logitech G Pro X", source: "oratory1990", type: "over-ear"),
+        AutoEQHeadphone(name: "Razer BlackShark V2", source: "oratory1990", type: "over-ear"),
+
+        // Apple
+        AutoEQHeadphone(name: "Apple AirPods Max", source: "oratory1990", type: "over-ear"),
+
+        // === IN-EAR / IEMs === //
+
+        // Apple
         AutoEQHeadphone(name: "Apple AirPods Pro", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Apple AirPods Pro 2", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Apple AirPods (3rd generation)", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Apple AirPods (2nd generation)", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Apple EarPods", source: "oratory1990", type: "in-ear"),
+
+        // Sony IEMs
+        AutoEQHeadphone(name: "Sony WF-1000XM3", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Sony WF-1000XM4", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sony WF-1000XM5", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sony IER-M7", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sony IER-M9", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sony MDR-EX800ST", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sony LinkBuds S", source: "oratory1990", type: "in-ear"),
+
+        // Samsung
         AutoEQHeadphone(name: "Samsung Galaxy Buds Pro", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Samsung Galaxy Buds2 Pro", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Samsung Galaxy Buds2", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Samsung Galaxy Buds Plus", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Samsung Galaxy Buds Live", source: "oratory1990", type: "in-ear"),
+
+        // Shure IEMs
         AutoEQHeadphone(name: "Shure SE215", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Shure SE315", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Shure SE425", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Shure SE535", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Shure SE846", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Shure Aonic 3", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Shure Aonic 4", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Shure Aonic 5", source: "oratory1990", type: "in-ear"),
+
+        // Moondrop
         AutoEQHeadphone(name: "Moondrop Blessing 2", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Blessing 2 Dusk", source: "crinacle", type: "in-ear"),
         AutoEQHeadphone(name: "Moondrop Starfield", source: "crinacle", type: "in-ear"),
         AutoEQHeadphone(name: "Moondrop Aria", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "7Hz Timeless", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Etymotic ER2XR", source: "oratory1990", type: "in-ear"),
-        AutoEQHeadphone(name: "Etymotic ER4XR", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Kato", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Variations", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Chu", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Quarks", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop KXXS", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop S8", source: "crinacle", type: "in-ear"),
 
-        // On-ear
+        // Etymotic
+        AutoEQHeadphone(name: "Etymotic ER2XR", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Etymotic ER2SE", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Etymotic ER3XR", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Etymotic ER3SE", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Etymotic ER4XR", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Etymotic ER4SR", source: "oratory1990", type: "in-ear"),
+
+        // Other IEMs
+        AutoEQHeadphone(name: "7Hz Timeless", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "7Hz Salnotes Zero", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Tin HiFi T2", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Tin HiFi T3", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Tin HiFi P1", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "KZ ZS10 Pro", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "KZ ZSN Pro", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "CCA CRA", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Tripowin Lea", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "BLON BL-03", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Shuoer S12", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Truthear Zero", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Truthear Hexa", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Dunu Titan S", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Final Audio E3000", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Final Audio E5000", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Final Audio A4000", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Campfire Audio Andromeda", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Campfire Audio Solaris", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Westone W40", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Fiio FH3", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Fiio FH5", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Fiio FD5", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "ThieAudio Legacy 3", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "ThieAudio Monarch MKII", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Sennheiser IE 300", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sennheiser IE 600", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sennheiser IE 900", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Sennheiser Momentum True Wireless 3", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Jabra Elite 75t", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Jabra Elite 85t", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Google Pixel Buds Pro", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Nothing Ear (1)", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Nothing Ear (2)", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Anker Soundcore Liberty 3 Pro", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "1More Triple Driver", source: "oratory1990", type: "in-ear"),
+
+        // === ON-EAR === //
         AutoEQHeadphone(name: "Koss Porta Pro", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Koss KSC75", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Koss KPH30i", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Grado SR60e", source: "oratory1990", type: "on-ear"),
         AutoEQHeadphone(name: "Grado SR80e", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Grado SR125e", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Grado SR225e", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Grado SR325e", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Beats Solo3 Wireless", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Beats Solo Pro", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Marshall Major IV", source: "oratory1990", type: "on-ear"),
+        AutoEQHeadphone(name: "Bowers & Wilkins PX5", source: "oratory1990", type: "on-ear"),
     ]
 
     // MARK: - Search

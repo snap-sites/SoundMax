@@ -155,9 +155,17 @@ struct AutoEQView: View {
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(.primary)
 
-                    Text(headphone.displayType)
-                        .font(.system(size: 10))
-                        .foregroundColor(.secondary)
+                    HStack(spacing: 4) {
+                        Text(headphone.displayType)
+                            .font(.system(size: 10))
+                            .foregroundColor(.secondary)
+                        Text("•")
+                            .font(.system(size: 10))
+                            .foregroundColor(.secondary.opacity(0.5))
+                        Text(headphone.source)
+                            .font(.system(size: 10))
+                            .foregroundColor(.orange.opacity(0.8))
+                    }
                 }
 
                 Spacer()
