@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E48CE5399622798326732E4 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A097FC8AA074A9C2DB3A90 /* AudioEngine.swift */; };
+		2A2494488E18410C6D27F795 /* EQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A60E655B672C965CAE226 /* EQModel.swift */; };
+		2F8C0C1985B0255E7CB26D51 /* EQSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78ED980AAED8A73537EC45E /* EQSliderView.swift */; };
+		4469824EEEA88F4E660DF7AB /* AudioDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444BFFBC1DBCB0D06DD4304 /* AudioDeviceManager.swift */; };
+		8D8D801DB1C99A988241BF5B /* BiquadFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FD6D0200D7D0FE3101D83A /* BiquadFilter.swift */; };
+		B44A1A949BC2A06490A7617D /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07907DEB12E0717D58D55A19 /* LaunchAtLogin.swift */; };
+		B4E9A50D6F86F805FBF71FC5 /* EQPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EC78AF207C511ECF968539 /* EQPreset.swift */; };
+		D4EE2DFEEB5854168EF0A0D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D1309559DC169C09D7F42 /* ContentView.swift */; };
+		DDE2D0ED56A330F4F2279D60 /* SoundMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DA36A1F8703E28C5084AF /* SoundMaxApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03EC78AF207C511ECF968539 /* EQPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQPreset.swift; sourceTree = "<group>"; };
+		07907DEB12E0717D58D55A19 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		5008C2369D4FCA33AE27B502 /* SoundMax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoundMax.entitlements; sourceTree = "<group>"; };
+		51FD6D0200D7D0FE3101D83A /* BiquadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiquadFilter.swift; sourceTree = "<group>"; };
+		5E8A60E655B672C965CAE226 /* EQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQModel.swift; sourceTree = "<group>"; };
+		B42DA36A1F8703E28C5084AF /* SoundMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundMaxApp.swift; sourceTree = "<group>"; };
+		C444BFFBC1DBCB0D06DD4304 /* AudioDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceManager.swift; sourceTree = "<group>"; };
+		D235C00C8D24E5AD3050FF87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D6A097FC8AA074A9C2DB3A90 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		E78ED980AAED8A73537EC45E /* EQSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQSliderView.swift; sourceTree = "<group>"; };
+		F71D1309559DC169C09D7F42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9EACF6F7A3FF42A540BFADB /* SoundMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		13C159E44B26A6D615F03CE4 /* SoundMax */ = {
+			isa = PBXGroup;
+			children = (
+				F71D1309559DC169C09D7F42 /* ContentView.swift */,
+				D235C00C8D24E5AD3050FF87 /* Info.plist */,
+				5008C2369D4FCA33AE27B502 /* SoundMax.entitlements */,
+				B42DA36A1F8703E28C5084AF /* SoundMaxApp.swift */,
+				9CD4B4FB674D012E7B251319 /* Audio */,
+				97C1BCE090899A4DC70EE5AC /* Models */,
+				CC6973476E463BA86F29C27F /* Views */,
+			);
+			path = SoundMax;
+			sourceTree = "<group>";
+		};
+		332CE17EC83C1BAE83AF0544 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9EACF6F7A3FF42A540BFADB /* SoundMax.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97C1BCE090899A4DC70EE5AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C444BFFBC1DBCB0D06DD4304 /* AudioDeviceManager.swift */,
+				5E8A60E655B672C965CAE226 /* EQModel.swift */,
+				03EC78AF207C511ECF968539 /* EQPreset.swift */,
+				07907DEB12E0717D58D55A19 /* LaunchAtLogin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CD4B4FB674D012E7B251319 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				D6A097FC8AA074A9C2DB3A90 /* AudioEngine.swift */,
+				51FD6D0200D7D0FE3101D83A /* BiquadFilter.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		CC6973476E463BA86F29C27F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E78ED980AAED8A73537EC45E /* EQSliderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9A5552073C5FA8268A3E765 = {
+			isa = PBXGroup;
+			children = (
+				13C159E44B26A6D615F03CE4 /* SoundMax */,
+				332CE17EC83C1BAE83AF0544 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3726484049C26C4BCDA7CB4C /* SoundMax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DCA9856C318300459A9670 /* Build configuration list for PBXNativeTarget "SoundMax" */;
+			buildPhases = (
+				A97B8C235348D6CB4855CD7C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundMax;
+			packageProductDependencies = (
+			);
+			productName = SoundMax;
+			productReference = F9EACF6F7A3FF42A540BFADB /* SoundMax.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		930E4B7EF493EE3A9FF1BDD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = C9A80F3E8D167B251085E6A0 /* Build configuration list for PBXProject "SoundMax" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F9A5552073C5FA8268A3E765;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3726484049C26C4BCDA7CB4C /* SoundMax */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A97B8C235348D6CB4855CD7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4469824EEEA88F4E660DF7AB /* AudioDeviceManager.swift in Sources */,
+				1E48CE5399622798326732E4 /* AudioEngine.swift in Sources */,
+				8D8D801DB1C99A988241BF5B /* BiquadFilter.swift in Sources */,
+				D4EE2DFEEB5854168EF0A0D9 /* ContentView.swift in Sources */,
+				2A2494488E18410C6D27F795 /* EQModel.swift in Sources */,
+				B4E9A50D6F86F805FBF71FC5 /* EQPreset.swift in Sources */,
+				2F8C0C1985B0255E7CB26D51 /* EQSliderView.swift in Sources */,
+				B44A1A949BC2A06490A7617D /* LaunchAtLogin.swift in Sources */,
+				DDE2D0ED56A330F4F2279D60 /* SoundMaxApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		46FA447B1427D724636FC03D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SoundMax/SoundMax.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = SoundMax/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourname.SoundMax;
+				PRODUCT_NAME = SoundMax;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		577AB1D171FFB35CB67F4D7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SoundMax/SoundMax.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = SoundMax/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourname.SoundMax;
+				PRODUCT_NAME = SoundMax;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		E9D85B85E64B0D3649975C36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EA1871C6DD805EAB82B413EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03DCA9856C318300459A9670 /* Build configuration list for PBXNativeTarget "SoundMax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46FA447B1427D724636FC03D /* Debug */,
+				577AB1D171FFB35CB67F4D7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C9A80F3E8D167B251085E6A0 /* Build configuration list for PBXProject "SoundMax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1871C6DD805EAB82B413EF /* Debug */,
+				E9D85B85E64B0D3649975C36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 930E4B7EF493EE3A9FF1BDD2 /* Project object */;
+}

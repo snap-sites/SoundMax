@@ -1,0 +1,27 @@
+name: SoundMax
+options:
+  bundleIdPrefix: com.yourname
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15.0"
+
+targets:
+  SoundMax:
+    type: application
+    platform: macOS
+    sources:
+      - SoundMax
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yourname.SoundMax
+        PRODUCT_NAME: SoundMax
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        INFOPLIST_FILE: SoundMax/Info.plist
+        CODE_SIGN_ENTITLEMENTS: SoundMax/SoundMax.entitlements
+        SWIFT_VERSION: "5.9"
+        ENABLE_HARDENED_RUNTIME: NO
+        CODE_SIGN_IDENTITY: "-"
+    info:
+      path: SoundMax/Info.plist
+    entitlements:
+      path: SoundMax/SoundMax.entitlements
