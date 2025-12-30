@@ -35,7 +35,7 @@ Or download directly from [BlackHole Releases](https://github.com/ExistentialAud
 
 **Option A: Download Release (Recommended)**
 
-1. Download the latest DMG from [Releases](https://github.com/yourusername/SoundMax/releases)
+1. Download the latest DMG from [Releases](https://github.com/snap-sites/SoundMax/releases)
 2. Open the DMG and drag SoundMax to Applications
 3. If macOS blocks the app: Right-click → Open → Open
 
@@ -49,7 +49,7 @@ xcode-select --install
 brew install xcodegen
 
 # Clone and build
-git clone https://github.com/yourusername/SoundMax.git
+git clone https://github.com/snap-sites/SoundMax.git
 cd SoundMax
 xcodegen generate
 xcodebuild -project SoundMax.xcodeproj -scheme SoundMax -configuration Release build
