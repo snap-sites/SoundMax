@@ -47,14 +47,14 @@ struct ContentView: View {
             syncEQToEngine()
             autoSelectDevices()
         }
-        .onChange(of: eqModel.bands) { _, newValue in
+        .onChange(of: eqModel.bands) { newValue in
             audioEngine.setAllGains(newValue)
             eqModel.clearPresetSelection()
         }
-        .onChange(of: eqModel.isEnabled) { _, newValue in
+        .onChange(of: eqModel.isEnabled) { newValue in
             audioEngine.setBypass(!newValue)
         }
-        .onChange(of: eqModel.volume) { _, newValue in
+        .onChange(of: eqModel.volume) { newValue in
             audioEngine.setVolume(newValue)
         }
         .sheet(isPresented: $showingSavePreset) {
@@ -299,7 +299,7 @@ struct ContentView: View {
                 }
                 .labelsHidden()
                 .help("Select BlackHole 2ch to capture system audio")
-                .onChange(of: selectedInputID) { _, newDevice in
+                .onChange(of: selectedInputID) { newDevice in
                     if let deviceID = newDevice {
                         audioEngine.setInputDevice(deviceID)
                     }
@@ -319,7 +319,7 @@ struct ContentView: View {
                 }
                 .labelsHidden()
                 .help("Select your speakers or headphones")
-                .onChange(of: selectedOutputID) { _, newDevice in
+                .onChange(of: selectedOutputID) { newDevice in
                     if let deviceID = newDevice {
                         audioEngine.setOutputDevice(deviceID)
                     }

@@ -19,7 +19,7 @@ SoundMax sits in your menu bar and applies real-time EQ processing to all system
 
 ## Requirements
 
-- macOS 14.0 (Sonoma) or later
+- macOS 13.0 (Ventura) or later
 - [BlackHole 2ch](https://github.com/ExistentialAudio/BlackHole) virtual audio driver
 
 ## Installation

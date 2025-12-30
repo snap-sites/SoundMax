@@ -65,7 +65,7 @@ struct AutoEQView: View {
             TextField("Search headphones...", text: $searchText)
                 .textFieldStyle(.roundedBorder)
                 .focused($isSearchFocused)
-                .onChange(of: searchText) { _, newValue in
+                .onChange(of: searchText) { newValue in
                     if newValue.isEmpty {
                         autoEQManager.searchResults = AutoEQManager.popularHeadphones
                     } else {
