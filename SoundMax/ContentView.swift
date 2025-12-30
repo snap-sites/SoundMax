@@ -83,15 +83,30 @@ struct ContentView: View {
             Toggle("", isOn: $eqModel.isEnabled)
                 .toggleStyle(.switch)
                 .labelsHidden()
+                .help("Enable or bypass EQ processing")
         }
     }
+
+    private static let frequencyTooltips = [
+        "Sub-bass: Rumble, sub-woofer content",
+        "Bass: Kick drums, bass guitar fundamentals",
+        "Low-mid: Bass warmth, body of sound",
+        "Mid-bass: Reduce for less muddiness",
+        "Midrange: Vocal body, snare drum",
+        "Upper-mid: Vocal presence, clarity",
+        "Presence: Detail, intelligibility",
+        "Brilliance: Attack, consonants, hi-hat",
+        "Treble: Airiness, cymbal shimmer",
+        "Air: Sparkle, highest harmonics"
+    ]
 
     private var eqSliders: some View {
         HStack(spacing: 6) {
             ForEach(0..<10, id: \.self) { index in
                 EQSliderView(
                     value: $eqModel.bands[index],
-                    label: EQModel.frequencyLabels[index]
+                    label: EQModel.frequencyLabels[index],
+                    tooltip: Self.frequencyTooltips[index]
                 )
             }
         }
@@ -107,6 +122,7 @@ struct ContentView: View {
                     .font(.caption)
 
                 Slider(value: $eqModel.volume, in: 0...1)
+                    .help("Software volume control - macOS disables hardware volume for HDMI outputs")
 
                 Image(systemName: "speaker.wave.3.fill")
                     .foregroundColor(.secondary)
@@ -164,6 +180,7 @@ struct ContentView: View {
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(6)
                 }
+                .help("Select a preset EQ curve")
 
                 Button {
                     newPresetName = ""
@@ -172,7 +189,7 @@ struct ContentView: View {
                     Image(systemName: "plus")
                 }
                 .buttonStyle(.borderless)
-                .help("Save current settings as preset")
+                .help("Save current EQ as a custom preset")
 
                 if let customPreset = eqModel.selectedCustomPreset {
                     Button {
@@ -213,6 +230,7 @@ struct ContentView: View {
                     }
                 }
                 .labelsHidden()
+                .help("Select BlackHole 2ch to capture system audio")
                 .onChange(of: selectedInputID) { _, newDevice in
                     if let deviceID = newDevice {
                         audioEngine.setInputDevice(deviceID)
@@ -232,6 +250,7 @@ struct ContentView: View {
                     }
                 }
                 .labelsHidden()
+                .help("Select your speakers or headphones")
                 .onChange(of: selectedOutputID) { _, newDevice in
                     if let deviceID = newDevice {
                         audioEngine.setOutputDevice(deviceID)
@@ -305,6 +324,7 @@ struct ContentView: View {
                 Toggle("Launch at Login", isOn: $launchAtLogin.isEnabled)
                     .font(.caption)
                     .toggleStyle(.checkbox)
+                    .help("Automatically start SoundMax when you log in")
 
                 Spacer()
             }
@@ -317,6 +337,7 @@ struct ContentView: View {
                 Button("Reset") {
                     eqModel.reset()
                 }
+                .help("Reset all EQ bands to 0dB (flat)")
 
                 Button(audioEngine.isRunning ? "Stop" : "Start") {
                     if audioEngine.isRunning {
@@ -326,10 +347,12 @@ struct ContentView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
+                .help(audioEngine.isRunning ? "Stop audio processing" : "Start audio processing")
 
                 Button("Quit") {
                     NSApplication.shared.terminate(nil)
                 }
+                .help("Quit SoundMax")
             }
         }
     }

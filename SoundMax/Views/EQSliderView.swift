@@ -3,6 +3,7 @@ import SwiftUI
 struct EQSliderView: View {
     @Binding var value: Float
     let label: String
+    var tooltip: String = ""
 
     private let range: ClosedRange<Float> = -12...12
     private let sliderHeight: CGFloat = 120
@@ -70,6 +71,7 @@ struct EQSliderView: View {
                 .font(.system(size: 9))
                 .foregroundColor(.secondary)
         }
+        .help(tooltip.isEmpty ? "Adjust \(label)Hz frequency (±12dB)" : tooltip)
     }
 
     private var formattedValue: String {
