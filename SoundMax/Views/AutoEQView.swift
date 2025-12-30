@@ -66,6 +66,8 @@ struct AutoEQView: View {
                 .textFieldStyle(.roundedBorder)
                 .focused($isSearchFocused)
                 .onChange(of: searchText) { newValue in
+                    // Clear any error when user starts typing
+                    autoEQManager.errorMessage = nil
                     if newValue.isEmpty {
                         autoEQManager.searchResults = AutoEQManager.popularHeadphones
                     } else {
@@ -103,7 +105,7 @@ struct AutoEQView: View {
     }
 
     private func errorView(_ error: String) -> some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 12) {
             Image(systemName: "exclamationmark.triangle")
                 .font(.title)
                 .foregroundColor(.orange)
@@ -111,6 +113,11 @@ struct AutoEQView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
+            Button("Back to List") {
+                autoEQManager.errorMessage = nil
+                selectedHeadphone = nil
+            }
+            .buttonStyle(.bordered)
         }
         .frame(maxHeight: .infinity)
     }

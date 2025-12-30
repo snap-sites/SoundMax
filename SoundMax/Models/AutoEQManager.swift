@@ -169,17 +169,14 @@ class AutoEQManager: ObservableObject {
         AutoEQHeadphone(name: "Shure Aonic 4", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Shure Aonic 5", source: "oratory1990", type: "in-ear"),
 
-        // Moondrop
-        AutoEQHeadphone(name: "Moondrop Blessing 2", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop Blessing 2 Dusk", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop Starfield", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop Aria", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop Kato", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop Variations", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop Chu", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop Quarks", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop KXXS", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Moondrop S8", source: "crinacle", type: "in-ear"),
+        // Moondrop (oratory1990 measurements)
+        AutoEQHeadphone(name: "Moondrop Blessing 2", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Starfield", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Aria", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Kato", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Variations", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop Chu", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Moondrop KXXS", source: "oratory1990", type: "in-ear"),
 
         // Etymotic
         AutoEQHeadphone(name: "Etymotic ER2XR", source: "oratory1990", type: "in-ear"),
@@ -189,32 +186,15 @@ class AutoEQManager: ObservableObject {
         AutoEQHeadphone(name: "Etymotic ER4XR", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Etymotic ER4SR", source: "oratory1990", type: "in-ear"),
 
-        // Other IEMs
-        AutoEQHeadphone(name: "7Hz Timeless", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "7Hz Salnotes Zero", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Tin HiFi T2", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Tin HiFi T3", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Tin HiFi P1", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "KZ ZS10 Pro", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "KZ ZSN Pro", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "CCA CRA", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Tripowin Lea", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "BLON BL-03", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Shuoer S12", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Truthear Zero", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Truthear Hexa", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Dunu Titan S", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Final Audio E3000", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Final Audio E5000", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Final Audio A4000", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Campfire Audio Andromeda", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Campfire Audio Solaris", source: "crinacle", type: "in-ear"),
+        // Other IEMs (oratory1990 measurements)
+        AutoEQHeadphone(name: "7Hz Timeless", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Tin HiFi T2", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "KZ ZS10 Pro", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "BLON BL-03", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Final Audio E3000", source: "oratory1990", type: "in-ear"),
+        AutoEQHeadphone(name: "Campfire Audio Andromeda", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Westone W40", source: "oratory1990", type: "in-ear"),
-        AutoEQHeadphone(name: "Fiio FH3", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Fiio FH5", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "Fiio FD5", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "ThieAudio Legacy 3", source: "crinacle", type: "in-ear"),
-        AutoEQHeadphone(name: "ThieAudio Monarch MKII", source: "crinacle", type: "in-ear"),
+        AutoEQHeadphone(name: "Fiio FH3", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Sennheiser IE 300", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Sennheiser IE 600", source: "oratory1990", type: "in-ear"),
         AutoEQHeadphone(name: "Sennheiser IE 900", source: "oratory1990", type: "in-ear"),
@@ -384,7 +364,10 @@ struct AutoEQHeadphone: Identifiable, Hashable {
     let type: String    // over-ear, in-ear, on-ear
 
     var graphicEQURL: String {
-        let encodedName = name.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? name
+        // Use a character set that encodes spaces and special characters properly
+        var allowed = CharacterSet.alphanumerics
+        allowed.insert(charactersIn: "-_.")
+        let encodedName = name.addingPercentEncoding(withAllowedCharacters: allowed) ?? name
         return "https://raw.githubusercontent.com/jaakkopasanen/AutoEq/master/results/\(source)/\(type)/\(encodedName)/\(encodedName)%20GraphicEQ.txt"
     }
 
