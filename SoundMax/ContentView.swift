@@ -59,10 +59,6 @@ struct ContentView: View {
         .sheet(isPresented: $showingSavePreset) {
             savePresetSheet
         }
-        .sheet(isPresented: $showingAutoEQ) {
-            AutoEQView()
-                .environmentObject(eqModel)
-        }
     }
 
     private func setupDeviceChangeCallback() {
@@ -203,6 +199,10 @@ struct ContentView: View {
                 }
                 .buttonStyle(.borderless)
                 .help("Apply AutoEQ headphone correction")
+                .popover(isPresented: $showingAutoEQ) {
+                    AutoEQView()
+                        .environmentObject(eqModel)
+                }
 
                 if let customPreset = eqModel.selectedCustomPreset {
                     Button {
