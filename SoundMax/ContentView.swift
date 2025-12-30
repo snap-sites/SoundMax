@@ -21,6 +21,11 @@ struct ContentView: View {
 
             eqSliders
 
+            // Volume slider for HDMI/devices without hardware volume
+            if audioEngine.outputDeviceNeedsVolumeControl {
+                volumeControl
+            }
+
             Divider()
 
             presetControls
@@ -36,6 +41,7 @@ struct ContentView: View {
         .padding()
         .frame(width: 440)
         .onAppear {
+            setupDeviceChangeCallback()
             syncEQToEngine()
             autoSelectDevices()
         }
@@ -46,8 +52,21 @@ struct ContentView: View {
         .onChange(of: eqModel.isEnabled) { _, newValue in
             audioEngine.setBypass(!newValue)
         }
+        .onChange(of: eqModel.volume) { _, newValue in
+            audioEngine.setVolume(newValue)
+        }
         .sheet(isPresented: $showingSavePreset) {
             savePresetSheet
+        }
+    }
+
+    private func setupDeviceChangeCallback() {
+        audioEngine.onOutputDeviceChanged = { _, uid, name in
+            DispatchQueue.main.async {
+                eqModel.onDeviceChanged(deviceUID: uid, deviceName: name)
+                // Sync volume from profile to engine
+                audioEngine.setVolume(eqModel.volume)
+            }
         }
     }
 
@@ -78,6 +97,31 @@ struct ContentView: View {
         }
         .opacity(eqModel.isEnabled ? 1.0 : 0.5)
         .disabled(!eqModel.isEnabled)
+    }
+
+    private var volumeControl: some View {
+        VStack(spacing: 4) {
+            HStack {
+                Image(systemName: "speaker.fill")
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+
+                Slider(value: $eqModel.volume, in: 0...1)
+
+                Image(systemName: "speaker.wave.3.fill")
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+
+                Text("\(Int(eqModel.volume * 100))%")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .frame(width: 35, alignment: .trailing)
+            }
+
+            Text("HDMI Volume (no hardware control)")
+                .font(.caption2)
+                .foregroundColor(.secondary)
+        }
     }
 
     private var presetControls: some View {
@@ -195,10 +239,62 @@ struct ContentView: View {
                 }
             }
 
+            // Device profile controls
+            if eqModel.currentDeviceName != nil {
+                deviceProfileControls
+            }
+
             if let error = audioEngine.errorMessage {
                 Text(error)
                     .font(.caption)
                     .foregroundColor(.red)
+            }
+        }
+    }
+
+    private var deviceProfileControls: some View {
+        HStack {
+            if eqModel.hasDeviceProfile {
+                HStack(spacing: 4) {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                        .font(.caption)
+                    Text("Profile saved for \(eqModel.currentDeviceName ?? "device")")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+
+                Spacer()
+
+                Button {
+                    eqModel.deleteCurrentDeviceProfile()
+                } label: {
+                    Image(systemName: "trash")
+                        .font(.caption)
+                }
+                .buttonStyle(.borderless)
+                .foregroundColor(.red)
+                .help("Delete device profile")
+            } else {
+                HStack(spacing: 4) {
+                    Image(systemName: "circle.dashed")
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                    Text("No profile for \(eqModel.currentDeviceName ?? "device")")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+
+                Spacer()
+
+                Button {
+                    eqModel.saveCurrentAsDeviceProfile()
+                } label: {
+                    Text("Save Profile")
+                        .font(.caption)
+                }
+                .buttonStyle(.borderless)
+                .help("Save EQ settings for this device")
             }
         }
     }

@@ -10,6 +10,8 @@ SoundMax sits in your menu bar and applies real-time EQ processing to all system
 - **±12dB Per Band** - Precise control with professional biquad filtering
 - **Built-in Presets** - Flat, Bass Boost, Treble Boost, Vocal, Rock, Electronic, Acoustic
 - **Custom Presets** - Save and load your own EQ configurations
+- **Per-Device Profiles** - Automatically save and restore EQ settings for each output device
+- **HDMI Volume Control** - Software volume slider for HDMI outputs (macOS disables hardware control)
 - **Menu Bar App** - Always accessible, no dock icon clutter
 - **Launch at Login** - Optional auto-start with your Mac
 - **Device Flexibility** - Works with various audio interfaces and sample rates
@@ -108,6 +110,16 @@ xcodebuild -project SoundMax.xcodeproj -scheme SoundMax -configuration Release b
 ### Launch at Login
 
 Check the "Launch at Login" box to have SoundMax start automatically when you log in. This setting is managed through macOS Login Items.
+
+### Per-Device Profiles
+
+SoundMax automatically remembers your EQ settings for each output device:
+
+1. **First time with a device**: Adjust your EQ settings and click "Save Profile"
+2. **Returning to a device**: Your saved EQ and volume settings are automatically restored
+3. **HDMI displays**: A software volume slider appears since macOS disables hardware volume control for HDMI
+
+This is perfect for users who switch between headphones, speakers, and HDMI displays with different audio characteristics.
 
 ## Troubleshooting
 

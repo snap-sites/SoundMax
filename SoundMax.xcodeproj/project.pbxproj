@@ -16,11 +16,13 @@
 		B4E9A50D6F86F805FBF71FC5 /* EQPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EC78AF207C511ECF968539 /* EQPreset.swift */; };
 		D4EE2DFEEB5854168EF0A0D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D1309559DC169C09D7F42 /* ContentView.swift */; };
 		DDE2D0ED56A330F4F2279D60 /* SoundMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DA36A1F8703E28C5084AF /* SoundMaxApp.swift */; };
+		E0DDFD321979092D60ABC259 /* DeviceProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDABD38567914BE03CA937E /* DeviceProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03EC78AF207C511ECF968539 /* EQPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQPreset.swift; sourceTree = "<group>"; };
 		07907DEB12E0717D58D55A19 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		0DDABD38567914BE03CA937E /* DeviceProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProfile.swift; sourceTree = "<group>"; };
 		5008C2369D4FCA33AE27B502 /* SoundMax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoundMax.entitlements; sourceTree = "<group>"; };
 		51FD6D0200D7D0FE3101D83A /* BiquadFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiquadFilter.swift; sourceTree = "<group>"; };
 		5E8A60E655B672C965CAE226 /* EQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQModel.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				C444BFFBC1DBCB0D06DD4304 /* AudioDeviceManager.swift */,
+				0DDABD38567914BE03CA937E /* DeviceProfile.swift */,
 				5E8A60E655B672C965CAE226 /* EQModel.swift */,
 				03EC78AF207C511ECF968539 /* EQPreset.swift */,
 				07907DEB12E0717D58D55A19 /* LaunchAtLogin.swift */,
@@ -149,6 +152,7 @@
 				1E48CE5399622798326732E4 /* AudioEngine.swift in Sources */,
 				8D8D801DB1C99A988241BF5B /* BiquadFilter.swift in Sources */,
 				D4EE2DFEEB5854168EF0A0D9 /* ContentView.swift in Sources */,
+				E0DDFD321979092D60ABC259 /* DeviceProfile.swift in Sources */,
 				2A2494488E18410C6D27F795 /* EQModel.swift in Sources */,
 				B4E9A50D6F86F805FBF71FC5 /* EQPreset.swift in Sources */,
 				2F8C0C1985B0255E7CB26D51 /* EQSliderView.swift in Sources */,

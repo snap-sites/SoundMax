@@ -15,9 +15,24 @@ class AudioEngine: ObservableObject {
     @Published var selectedOutputDeviceID: AudioDeviceID?
     @Published var errorMessage: String?
 
+    // Software volume control (0.0 to 1.0)
+    @Published var softwareVolume: Float = 1.0
+
+    // Device info
+    @Published var outputDeviceNeedsVolumeControl = false
+    @Published var outputDeviceUID: String?
+    @Published var outputDeviceName: String?
+
+    // Callback for device changes
+    var onOutputDeviceChanged: ((AudioDeviceID, String, String) -> Void)?
+
     static let bandFrequencies: [Float] = [32, 64, 125, 250, 500, 1000, 2000, 4000, 8000, 16000]
 
     init() {}
+
+    func setVolume(_ volume: Float) {
+        softwareVolume = max(0.0, min(1.0, volume))
+    }
 
     func setGain(forBand band: Int, gain: Float) {
         parametricEQ?.setGain(band: band, gain: gain)
@@ -41,10 +56,37 @@ class AudioEngine: ObservableObject {
 
     func setOutputDevice(_ deviceID: AudioDeviceID) {
         selectedOutputDeviceID = deviceID
+
+        // Get device info
+        if let name = getDeviceName(deviceID),
+           let uid = DeviceInfo.getDeviceUID(deviceID) {
+            outputDeviceUID = uid
+            outputDeviceName = name
+            outputDeviceNeedsVolumeControl = !DeviceInfo.hasHardwareVolumeControl(deviceID)
+
+            // Notify about device change
+            onOutputDeviceChanged?(deviceID, uid, name)
+        }
+
         if isRunning {
             stop()
             start()
         }
+    }
+
+    private func getDeviceName(_ deviceID: AudioDeviceID) -> String? {
+        var propertyAddress = AudioObjectPropertyAddress(
+            mSelector: kAudioDevicePropertyDeviceNameCFString,
+            mScope: kAudioObjectPropertyScopeGlobal,
+            mElement: kAudioObjectPropertyElementMain
+        )
+
+        var name: CFString?
+        var size = UInt32(MemoryLayout<CFString?>.size)
+
+        let status = AudioObjectGetPropertyData(deviceID, &propertyAddress, 0, nil, &size, &name)
+        guard status == noErr, let deviceName = name else { return nil }
+        return deviceName as String
     }
 
     func start() {
@@ -380,6 +422,18 @@ class AudioEngine: ObservableObject {
             for (channelIndex, buffer) in bufferListPtr.enumerated() where channelIndex < 2 {
                 guard let data = buffer.mData?.assumingMemoryBound(to: Float.self) else { continue }
                 eq.process(buffer: data, frameCount: Int(inNumberFrames), channel: channelIndex)
+            }
+        }
+
+        // Apply software volume
+        let volume = softwareVolume
+        if volume < 1.0 {
+            let bufferListPtr = UnsafeMutableAudioBufferListPointer(ioData)
+            for buffer in bufferListPtr {
+                guard let data = buffer.mData?.assumingMemoryBound(to: Float.self) else { continue }
+                for i in 0..<Int(inNumberFrames) {
+                    data[i] *= volume
+                }
             }
         }
 
